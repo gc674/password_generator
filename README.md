@@ -38,4 +38,4 @@ Sorry, translation to be added
 ```
 
 ## Readme template
-[Makeareadme](https://www.makeareadme.com/)]
+[Makeareadme](https://www.makeareadme.com/)
