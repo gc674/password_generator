@@ -6,6 +6,7 @@ Trebuie ca orice parola generata sa respecte urmatoarele criterii:
                      -mai mare de 8 caractere
                      -trebuie sa contina neaparat: o majuscula, o cifra, doua caractere speciale
 Parolele trebuie sa fie stocate intr o baza de date pentru istoric.
+Parolele sunt sticate cryptat folosind o cheie generată
 ```
 ## Requirements
 
@@ -37,10 +38,8 @@ For major changes, please open an issue first to discuss what you would like to 
 ```
 
 ## Todo
-```
-- add encription/decription for paswwords stored in the database using https://cryptography.io/en/latest/
-
-```
+- IMPLEMENTED: ~~add encription/decription for paswwords stored in the database using~~ - https://cryptography.io/en/latest/
+- store password per usage
 
 ## License
 [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
