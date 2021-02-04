@@ -42,3 +42,6 @@ For major changes, please open an issue first to discuss what you would like to 
 Romanian
 Sorry, translation to be added
 ```
+
+## Readme template
+[Make a README](https://www.makeareadme.com/)
