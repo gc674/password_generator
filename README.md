@@ -7,6 +7,14 @@ Trebuie ca orice parola generata sa respecte urmatoarele criterii:
                      -trebuie sa contina neaparat: o majuscula, o cifra, doua caractere speciale
 Parolele trebuie sa fie stocate intr o baza de date pentru istoric.
 ```
+## Requirements
+
+[![Cryptography](https://img.shields.io/pypi/v/cryptography.svg)](https://pypi.org/project/cryptography/)
+```python
+pip install cryptography
+```
+
+
 ## Usage
 
 ```python
@@ -30,7 +38,7 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## Todo
 ```
-- add encription/decription for paswwords stored in the database
+- add encription/decription for paswwords stored in the database using https://cryptography.io/en/latest/
 
 ```
 
