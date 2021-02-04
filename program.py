@@ -84,12 +84,14 @@ def _add_to_db(data, sql_table, db_name=fisier_db):
     else:
         print('Se crează baza de date!')
         time.sleep(0.5)
-        create_db(db_name,sql_table)
+        create_db(db_name, sql_table)
         write_to_db(db_name, data)
+
 
 def add_to_db(parola):
     """se generează meniul pentru introducerea datelor persoanei de contact"""
     _add_to_db(parola, sql_table=sql_agenda_table)
+
 
 def istoric(db_name=fisier_db):
     """se va afișa un istoric cu parolelel generate decriptate"""
@@ -105,7 +107,8 @@ def istoric(db_name=fisier_db):
     my_connection.close()
     time.sleep(0.5)
 
-def _generare_parola(l=9, majuscule=1, cifre=1, schar=2):
+
+def _generare_parola(lungime=9, majuscule=1, cifre=1, schar=2):
     """se va genera o parola în funcție de datele primite de la utilizator"""
     parola = []
     for i in range(majuscule):
@@ -117,7 +120,7 @@ def _generare_parola(l=9, majuscule=1, cifre=1, schar=2):
     for i in range(schar):
         data = string.punctuation
         parola.append(secrets.choice(data))
-    for i in range(l-(majuscule+cifre+schar)):
+    for i in range(lungime - (majuscule + cifre + schar)):
         data = string.ascii_letters + string.digits + string.punctuation
         parola.append(secrets.choice(data))
     random.shuffle(parola)
@@ -125,11 +128,11 @@ def _generare_parola(l=9, majuscule=1, cifre=1, schar=2):
     add_to_db(parola)
 
 
-def generare_parola(l=9, majuscule=1, cifre=1, schar=2):
+def generare_parola(lungime=9, majuscule=1, cifre=1, schar=2):
     """se va genera o parola"""
     print('Se generează parola...')
     time.sleep(0.5)
-    return _generare_parola(l, majuscule, cifre, schar)
+    return _generare_parola(lungime, majuscule, cifre, schar)
 
 
 def meniu():
@@ -140,9 +143,9 @@ def meniu():
     1. Generează o nouă parolă standard de minim 9 caractere.
     2. Generează o parolă nonstandard.
     3. Afișează isotric parole
-    
+
     !!!păstrați cheia generată!!!
-    
+
     Pentru a opri programul folosiți litera e
     ''')
 
@@ -155,10 +158,10 @@ def meniu():
     elif a == '2':
         lungime = int(input('Ce lungime va avea parola?: '))
         majuscule = int(input('Câte majuscule va conține?: '))
-        cifre =  int(input('Câte cifre va conține?: '))
+        cifre = int(input('Câte cifre va conține?: '))
         schar = int(input('Câte caractere speciale va conține?: '))
         termeni = majuscule + cifre + schar
-        if  termeni <= lungime:
+        if termeni <= lungime:
             if lungime <= 50:
                 generare_parola(lungime, majuscule, cifre, schar)
             else:
@@ -172,7 +175,6 @@ def meniu():
         istoric()
     else:
         print('Alegeți opțiunea corectă!')
-
 
 
 while True:
