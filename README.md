@@ -11,6 +11,7 @@ Parolele sunt sticate cryptat folosind o cheie generată
 ## Requirements
 
 [![Cryptography](https://img.shields.io/pypi/v/cryptography.svg)](https://pypi.org/project/cryptography/)
+[![Sqlite3](https://img.shields.io/badge/SQLITE3-Sqlite3-brightgreen)](https://docs.python.org/3/library/sqlite3.html)
 ```python
 pip install cryptography
 ```
