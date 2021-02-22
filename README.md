@@ -6,7 +6,7 @@ Trebuie ca orice parola generata sa respecte urmatoarele criterii:
                      -mai mare de 8 caractere
                      -trebuie sa contina neaparat: o majuscula, o cifra, doua caractere speciale
 Parolele trebuie sa fie stocate intr o baza de date pentru istoric.
-Parolele sunt sticate cryptat folosind o cheie generată
+Parolele sunt stocate cryptat folosind o cheie generată
 ```
 ## Requirements
 
