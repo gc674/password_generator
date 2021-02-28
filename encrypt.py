@@ -14,7 +14,7 @@ def load_key(cheia="secret"):
     """Încarcă cheia din directorul curent..
     """
     if os.path.exists(cheia):
-        print("Cheia există!")
+        # print("Cheia există!")
         return open(cheia, "rb").read()
     else:
         print("Cheia nu există.\nSe generează o cheie nouă!")
