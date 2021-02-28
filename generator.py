@@ -3,6 +3,7 @@ import secrets
 import random
 import database
 
+
 def generare(lungime, majuscule, cifre, schar):
     """se va genera o parola în funcție de datele primite de la utilizator"""
     parola = []
