@@ -17,7 +17,6 @@ class testencrypt(unittest.TestCase):
         expected = encrypt.load_key(self.key)
         self.assertEqual(actual, expected)
 
-
     def test_decrypt(self):
         actual = "oraoraora".encode()
         expected = encrypt.decriptare(actual, self.key)

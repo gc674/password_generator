@@ -42,6 +42,7 @@ For major changes, please open an issue first to discuss what you would like to 
 - IMPLEMENTED: ~~add encription/decription for paswwords stored in the database using~~ - https://cryptography.io/en/latest/
 - store password per usage
 - delete a password from history
+- unittests
 
 ## License
 [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
