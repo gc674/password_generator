@@ -26,7 +26,7 @@ def write_to_db(db_name, data):
     time.sleep(0.5)
     connection = sqlite3.connect(db_name)
     cursor = connection.cursor()
-    data = encrypt.criptare(data)
+    data = encrypt.criptare(data, keyfile="secret")
     cursor.execute("INSERT INTO parole (parola) VALUES (?);", [data])
     time.sleep(0.5)
     connection.commit()
@@ -62,7 +62,7 @@ def istoric(db_name=fisier_db):
     my_cursor.execute(f'''SELECT * FROM parole;''')
     rows = my_cursor.fetchall()
     for row in rows:
-        parola = encrypt.decriptare(row[1])
+        parola = encrypt.decriptare(row[1], keyfile="secret")
         print(parola)
     my_connection.close()
     time.sleep(0.5)
